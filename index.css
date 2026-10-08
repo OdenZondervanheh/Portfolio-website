@@ -1,11 +1,23 @@
+    html {
+        background:-moz-linear-gradient(top, #1d2224 30%, #050606); 
+        background:-webkit-linear-gradient(top, #181d20 30%, #080a0a);
+    }
+    
     body {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         padding: 40px;
         min-height: 100vh;
-        background:-moz-linear-gradient(top, #222c30 30%, #141819); 
-        background:-webkit-linear-gradient(top, #222c30 30%, #141819);
-        /* overflow: hidden; */
+        background-image: radial-gradient(#4b4b4b 1.2px, transparent 0);
+        background-size: 77px 77px;
+        overflow: hidden;
+        animation: AnimateGrid 10s ease infinite reverse;
     }
+
+    @keyframes AnimateGrid {
+        0% { background-position: 0% 50%;}
+        50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+     }
 
     ::-webkit-scrollbar {
         display: none;
@@ -20,7 +32,7 @@
         margin: 100px;
     }
 
-    .pieter {
+    .ascii {
         position: absolute;
         justify-content: right;
         font-size: 15px;
@@ -96,6 +108,6 @@
     .navlink {
         margin: 10px;
         text-decoration: none;
-        left: 230px;
+        left: 190px;
         position: relative;
     }
